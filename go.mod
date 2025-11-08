@@ -1,3 +1,3 @@
-module github.com/biancarosa/go-api
+module github.com/henriqueCCdA/go-api
 
 go 1.20

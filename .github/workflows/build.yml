@@ -1,0 +1,20 @@
+name: build
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-go-app-bin:
+    name: build og app binary
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v2
+      - name: set up Go
+        uses: actions/setup-go@v4
+        with:
+            go-verson: 1.20
+      - name: build go
+        run: go build
